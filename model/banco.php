@@ -26,6 +26,7 @@ class Banco{
 
     public function getLivro(){
         $result = $this->mysqli->query("SELECT * FROM livros");
+        $array = array();
         while($row = $result->fetch_array(MYSQLI_ASSOC)){
             $array[] = $row;
         }
